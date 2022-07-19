@@ -11,5 +11,8 @@ namespace CurrencyApp.Model
     {
         [JsonPropertyName("assets")]
         public List<Asset>? Assets { get; set; }
+
+        [JsonPropertyName("asset")]
+        public Asset? Asset { get; set; }
     }
 }

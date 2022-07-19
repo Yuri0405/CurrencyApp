@@ -12,14 +12,12 @@ namespace CurrencyApp.Services
     internal class CurrencyAPIClient
     {
         private static readonly HttpClient client = new HttpClient();
-        public async Task<List<Asset>> ProcessCurrency()
+        public async Task<RootObject> ProcessCurrency(string url)
         {
-            ///*
-            var streamTask = client.GetStreamAsync("https://www.cryptingup.com/api/assets?size=10");
+            var streamTask = client.GetStreamAsync(url);
             var rootObject = await JsonSerializer.DeserializeAsync<RootObject>(await streamTask);
-            var assets = rootObject.Assets;//*/
 
-            return assets;
+            return rootObject;
         }
     }
 }

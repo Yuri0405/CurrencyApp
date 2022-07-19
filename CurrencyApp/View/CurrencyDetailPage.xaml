@@ -9,6 +9,45 @@
       Title="CurrencyDetail">
 
     <Grid Background="White">
-        <Label Content="Second page about currency"></Label>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Content="Second page about currency"></Label>
+            <Label Content="Enter ID of currency:"/>
+            <TextBox x:Name="CurrencyIdInput" MaxHeight="20" Width="300" HorizontalAlignment="Left"/>
+            <Button MaxWidth="100" Content="Find Currency" HorizontalAlignment="Left" Click="buttonGetCurrency"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <Label Content="Asset ID"/>
+                    <Label Content="Some ID" x:Name="CurrencyIDValue"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Asset Name"/>
+                    <Label x:Name="CurrencyNameValue"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Change 1h"/>
+                    <Label x:Name="Change1hValue"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Change 24h"/>
+                    <Label x:Name="Change24hValue"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Change 7d"/>
+                    <Label x:Name="Change7dValue"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Volume 24"/>
+                    <Label x:Name="Volume24Value"/>
+                </StackPanel>
+            </StackPanel>
+            <Label Content="Description:"/>
+            <TextBlock x:Name="CurrencyDescription" Text="Some Description" Width="300" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="6,0,0,0"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -27,9 +27,7 @@ namespace CurrencyApp.View
         public MainPage()
         {
             InitializeComponent();
-            //DataContext = new AssetViewModel();
             _assetViewModel = new AssetViewModel();
-            //DataContext = _assetViewModel.Assets;
         }
 
         private async void buttonGetCurrencies(object sender, RoutedEventArgs e)
